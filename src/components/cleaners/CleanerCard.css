@@ -1,0 +1,77 @@
+.cleaner-card {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(44, 156, 171, 0.07);
+  padding: 1.3rem 1.5rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid #e0e7ef;
+  cursor: pointer;
+  transition: box-shadow 0.18s, border-color 0.18s, background 0.18s;
+}
+
+.cleaner-card:hover {
+  box-shadow: 0 6px 24px rgba(44, 156, 171, 0.13);
+  border-color: #2c9cab;
+  background: #f7fafc;
+}
+
+.cleaner-avatar {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #e0e7ef;
+  margin-right: 1.5rem;
+  border: 3px solid #f6f8fa;
+  box-shadow: 0 1px 4px rgba(44,156,171,0.07);
+}
+
+.cleaner-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.cleaner-info h3 {
+  margin: 0 0 0.2em 0;
+  color: #2c9cab;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.cleaner-info p {
+  margin: 0;
+  color: #23424a;
+  font-size: 1.05rem;
+}
+
+.cleaner-info p:nth-child(2) {
+  color: #f7b731; /* Rating en color dorado */
+  font-weight: 600;
+}
+
+.cleaner-info p:nth-child(3) {
+  color: #227c8c; /* Precio */
+  font-weight: 500;
+}
+
+.cleaner-info p:nth-child(4) {
+  color: #2c9cab; /* Disponibilidad */
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .cleaner-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+  .cleaner-avatar {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+}

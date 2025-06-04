@@ -1,0 +1,120 @@
+.premium-navbar {
+  transition: transform 0.35s cubic-bezier(.4,0,.2,1), box-shadow 0.18s;
+  will-change: transform;
+}
+
+.navbar--hidden {
+  transform: translateY(-120%);
+  box-shadow: none;
+  pointer-events: none;
+}
+
+.navbar {
+  width: 100%;
+  background: rgba(255,255,255,0.92);
+  color: #2c9cab;
+  padding: 1.3rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 16px rgba(44, 156, 171, 0.10);
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  backdrop-filter: blur(8px);
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 32px;
+}
+
+.navbar-brand a {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2c9cab;
+  letter-spacing: 2.5px;
+  text-decoration: none;
+  background: linear-gradient(90deg, #2c9cab 0%, #f7b731 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  transition: color 0.2s;
+}
+
+.navbar-brand a:hover {
+  color: #227c8c;
+  text-decoration: none;
+  filter: brightness(1.1);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-auth {
+  display: flex;
+  gap: 2.2rem;
+}
+
+.btn-link {
+  color: #2c9cab;
+  background: none;
+  border: none;
+  font: inherit;
+  font-weight: 500;
+  padding: 0.5rem 1.2rem;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, box-shadow 0.18s;
+  outline: none;
+  box-shadow: 0 1px 4px rgba(44,156,171,0.05);
+}
+
+.btn-link:hover, .btn-link:focus {
+  background: linear-gradient(90deg, #e0f7fa 0%, #fffbe6 100%);
+  color: #f7b731;
+  text-decoration: none;
+  box-shadow: 0 3px 12px rgba(44,156,171,0.11);
+}
+
+.logout-btn {
+  background: linear-gradient(90deg, #e74c3c 0%, #f7b731 100%);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.18s;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 1px 4px rgba(231,76,60,0.07);
+}
+
+.logout-btn:hover, .logout-btn:focus {
+  background: linear-gradient(90deg, #c0392b 0%, #f7b731 100%);
+  text-decoration: none;
+  box-shadow: 0 3px 12px rgba(231,76,60,0.13);
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    border-radius: 0 0 24px 24px;
+  }
+  .navbar-brand {
+    margin-bottom: 1rem;
+  }
+  .navbar-auth {
+    gap: 1rem;
+  }
+  nav {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
+
+
+

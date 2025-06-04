@@ -1,0 +1,41 @@
+.top-cleaners-container {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(44, 156, 171, 0.10);
+  padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+  margin-bottom: 2.5rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.top-cleaners-container h2 {
+  color: #2c9cab;
+  font-weight: 700;
+  margin-bottom: 1.8rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.cleaners-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 700px) {
+  .cleaners-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .top-cleaners-container {
+    padding: 1rem 0.5rem 1rem 0.5rem;
+  }
+}

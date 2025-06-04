@@ -1,0 +1,114 @@
+.user-profile {
+  background: rgba(255,255,255,0.96);
+  border-radius: 26px;
+  box-shadow: 0 8px 40px rgba(44, 156, 171, 0.13), 0 1.5px 6px rgba(0,0,0,0.07);
+  padding: 2.7rem 2.2rem 2.2rem 2.2rem;
+  max-width: 540px;
+  width: 100%;
+  margin: 2.5rem auto;
+  border: 1px solid #e0e7ef;
+  backdrop-filter: blur(8px);
+  animation: fadeInUp 0.6s;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(36px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+.user-profile h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2c9cab;
+  font-weight: 800;
+  letter-spacing: 1px;
+  font-size: 2rem;
+  background: linear-gradient(90deg, #2c9cab 0%, #f7b731 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.profile-avatar {
+  width: 104px;
+  height: 104px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #e0e7ef;
+  margin-bottom: 1.5rem;
+  border: 4px solid #fffbe6;
+  box-shadow: 0 2px 12px rgba(44,156,171,0.13);
+}
+
+.user-profile p {
+  margin: 0.6rem 0;
+  color: #23424a;
+  font-size: 1.12rem;
+  width: 100%;
+  text-align: left;
+}
+
+.user-profile strong {
+  color: #2c9cab;
+  font-weight: 700;
+}
+
+.user-profile button {
+  background: linear-gradient(90deg, #2c9cab 0%, #f7b731 100%);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 0.95rem 2.2rem;
+  font-weight: bold;
+  font-size: 1.13rem;
+  cursor: pointer;
+  margin-top: 1.3rem;
+  box-shadow: 0 2px 12px rgba(44, 156, 171, 0.10);
+  transition: background 0.2s, box-shadow 0.18s, transform 0.18s;
+  letter-spacing: 0.5px;
+}
+
+.user-profile button:hover {
+  background: linear-gradient(90deg, #227c8c 0%, #f7b731 100%);
+  box-shadow: 0 4px 24px rgba(44, 156, 171, 0.18);
+  transform: translateY(-2px) scale(1.03);
+}
+.profile-actions {
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.become-cleaner-btn {
+  background: linear-gradient(90deg, #f7b731 0%, #2c9cab 100%);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 0.95rem 2.2rem;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+.become-cleaner-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(247, 183, 49, 0.25);
+}
+
+@media (max-width: 600px) {
+  .user-profile {
+    padding: 1.2rem 0.5rem;
+    max-width: 99vw;
+  }
+  .user-profile h2 {
+    font-size: 1.2rem;
+  }
+  .profile-avatar {
+    width: 72px;
+    height: 72px;
+  }
+}

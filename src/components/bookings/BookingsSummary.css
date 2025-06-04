@@ -1,0 +1,118 @@
+.bookings-summary {
+  background: rgba(255,255,255,0.97);
+  border-radius: 22px;
+  box-shadow: 0 8px 40px rgba(44, 156, 171, 0.13), 0 1.5px 6px rgba(0,0,0,0.07);
+  padding: 2.2rem 1.5rem 1.5rem 1.5rem;
+  max-width: 540px;
+  width: 100%;
+  margin: 2.2rem auto 2rem auto;
+  border: 1px solid #e0e7ef;
+  backdrop-filter: blur(7px);
+  position: relative;
+  animation: fadeInUp 0.6s;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(36px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+.bookings-summary-title {
+  color: #2c9cab;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+  background: linear-gradient(90deg, #2c9cab 0%, #f7b731 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bookings-summary-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.bookings-summary-item {
+  background: #f6f8fa;
+  border-radius: 14px;
+  padding: 1.1rem 1.2rem;
+  box-shadow: 0 1px 4px rgba(44,156,171,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1.08rem;
+  position: relative;
+  transition: box-shadow 0.2s, background 0.2s, transform 0.13s;
+}
+
+.bookings-summary-item:hover {
+  box-shadow: 0 4px 16px rgba(44,156,171,0.14);
+  background: #eafaf1;
+  transform: scale(1.012);
+}
+
+.booking-date, .booking-cleaner {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.icon {
+  color: #2c9cab;
+  font-size: 1.1rem;
+}
+
+.booking-status {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.25rem 0.8rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  background: #e0e7ef;
+  color: #227c8c;
+  text-transform: capitalize;
+  box-shadow: 0 1px 6px rgba(44,156,171,0.09);
+}
+
+.booking-status.confirmada {
+  background: #eafaf1;
+  color: #2ecc40;
+}
+.booking-status.pendiente {
+  background: #fffbe6;
+  color: #f7b731;
+}
+.booking-status.cancelada {
+  background: #ffeaea;
+  color: #e74c3c;
+}
+
+.no-bookings {
+  text-align: center;
+  color: #aaa;
+  font-size: 1.1rem;
+  padding: 2rem 0;
+}
+
+@media (max-width: 600px) {
+  .bookings-summary {
+    padding: 1rem 0.5rem;
+    max-width: 99vw;
+  }
+  .bookings-summary-item {
+    padding: 0.8rem 0.6rem;
+    font-size: 1rem;
+  }
+  .bookings-summary-title {
+    font-size: 1.2rem;
+  }
+}
