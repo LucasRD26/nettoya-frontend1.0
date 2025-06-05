@@ -3,7 +3,7 @@ import axios from 'axios';
 import AuthService from './auth'; // Ruta correcta a tu servicio de autenticación
 
 const apiClient = axios.create({
-  baseURL: 'http://localhost:8080/api', // Cambiar en producción
+  baseURL: 'http://56.228.34.27:8080/api', // Cambiar en producción
   withCredentials: false,
   headers: {
     Accept: 'application/json',
